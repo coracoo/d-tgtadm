@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAS_iSCSI</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/static/iscsi-icon.svg" type="image/svg+xml">
+    <script src="/static/js/common.js"></script>
+    <script src="/static/js/acl.js"></script>
+    <script src="/static/js/target-lun.js"></script>
+    <script src="/static/js/disk.js"></script>
+</head>
+<body>
+    <!-- 添加Bootstrap JS引入 -->
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
+    <div class="container">
+        <header class="text-center mb-4">
+            <div class="d-flex align-items-center justify-content-center">
+                <img src="/static/iscsi-icon.svg" alt="iSCSI图标" class="logo">
+                <div>
+                    <h3>NAS_iSCSI</h3>
+                    <p class="text-muted">为NAS服务，利用docker来管理iSCSI服务和LUN块的工具</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- 消息提示 -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ 'success' if category == 'success' else 'danger' }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <!-- 系统信息、LUN优化与监控、系统状态三个模块并排 -->
+        <div class="row mb-4">
+            <!-- 系统信息 -->
+            <div class="col-md-2">
+                <div class="card h-100">
+                    <div class="card-header">基本信息</div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">iSCSI 端口: 3260</li>
+                            <li class="list-group-item">Web 端口: 13260</li>
+                            <!-- <li class="list-group-item">项目根目录: <span id="disk-dirs">加载中...</span></li> -->
+                             <li class="list-group-item">项目根目录:/app</span></li>
+                            <li class="list-group-item">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Target数量:</span>
+                                    <span id="target-count" class="badge bg-primary">0</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>LUN数量:</span>
+                                    <span id="lun-count" class="badge bg-success">0</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>磁盘文件数量:</span>
+                                    <span id="disk-count" class="badge bg-info">0</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- LUN优化与监控 -->
+            <div class="col-md-2">
+                <div class="card h-100">
+                    <div class="card-header">LUN 性能</div>
+                    <div class="card-body">
+                        <div class="d-grid gap-2">
+                            <form action="/optimize" method="post" onsubmit="return confirm('确定要执行LUN优化吗？这将优化所有LUN的性能和兼容性。')">
+                                <button type="submit" class="btn btn-primary w-100 mb-2">执行 LUN 优化</button>
+                            </form>
+                            <a href="/performance" class="btn btn-success w-100">性能监控（待）</a>
+                        </div>
+                        <div class="mt-2 small text-muted">
+                            <p>LUN优化将提高：</p>
+                            <ul class="small">
+                                <li>IO性能和稳定性</li>
+                                <li>块大小和对齐方式</li>
+                                <li>SCSI命令兼容性</li>
+                                <li>自动重连机制</li>
+                                <li>初始LUN已优化，后续新建LUN后可执行优化</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 系统状态 -->
+            <div class="col-md-8">
+                <div class="card h-100">
+                    <div class="card-header">iSCSI 状态栏</div>
+                    <div class="card-body">
+                        <div>
+                            <span class="status-indicator status-active" id="tgt-status"></span>
+                        </div>
+                        <div class="mt-3">
+                            <pre id="tgtadm-output" class="small" style="max-height: 200px; overflow-y: auto;">{{ tgtadm_output }}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Target管理 -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <span>Target 管理</span>
+                        <div>
+                            <button id="refreshTargetsBtn" class="btn btn-sm btn-secondary me-2">刷新列表</button>
+                            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createTargetModal">创建 Target</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Target ID</th>
+                                        <th>IQN</th>
+                                        <th>LUN 数量</th>
+                                        <th>访问白名单</th>
+                                        <th>已连接客户端</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% if targets %}
+                                        {% for target in targets %}
+                                            <tr>
+                                                <td>{{ target.tid }}</td>
+                                                <td><code>{{ target.name }}</code></td>
+                                                <td><span class="badge bg-primary">{{ target.luns|length }}</span></td>
+                                                <td>
+                                                    {% if target.acl_list %}
+                                                        {% if target.acl_mode == 'all' %}
+                                                            <span class="badge bg-success">允许所有访问</span>
+                                                        {% else %}
+                                                            {% for acl in target.acl_list %}
+                                                                <div class="small">
+                                                                    <span class="badge bg-info">{{ acl }}</span>
+                                                                </div>
+                                                            {% endfor %}
+                                                        {% endif %}
+                                                    {% else %}
+                                                        <span class="badge bg-warning">未设置访问控制</span>
+                                                    {% endif %}
+                                                </td>
+                                                <td>
+                                                    {% if target.nexus_information %}
+                                                        {% for nexus in target.nexus_information %}
+                                                            <div class="small">
+                                                                <strong>{{ nexus.initiator }}</strong>
+                                                                <br><span class="text-muted">IP: {{ nexus.ip_address }}</span>
+                                                            </div>
+                                                            {% if not loop.last %}<hr class="my-1">{% endif %}
+                                                        {% endfor %}
+                                                    {% else %}
+                                                        <span class="text-muted small">无连接</span>
+                                                    {% endif %}
+                                                </td>
+                                                <td>
+                                                    <div class="btn-group">
+                                                        <!-- <button type="button" class="btn btn-sm btn-outline-primary" 
+                                                                onclick="showUpdateTargetIdModal('{{ target.tid }}')">修改ID</button> -->
+                                                        <button class="btn btn-sm btn-success" data-bs-toggle="modal" 
+                                                                data-bs-target="#createLunModal" data-tid="{{ target.tid }}">添加LUN</button>
+                                                        <div class="btn-group">
+                                                            <button class="btn btn-sm btn-warning" data-bs-toggle="modal" 
+                                                                    data-bs-target="#setAclModal" data-tid="{{ target.tid }}"
+                                                                    data-acl-mode="{{ target.acl_mode }}"
+                                                                    data-acl-list="{{ target.acl_list|tojson }}">增加ACL策略</button>
+                                                            <button class="btn btn-sm btn-outline-danger" 
+                                                                    onclick="clearAcl('{{ target.tid }}')" 
+                                                                    title="清空所有访问控制规则">清空ACL策略</button>
+                                                        </div>
+                                                        <button class="btn btn-sm btn-danger delete-target-btn"
+                                                                data-tid="{{ target.tid }}"
+                                                                onclick="deleteTarget('{{ target.tid }}')">删除Target</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    {% else %}
+                                        <tr>
+                                            <td colspan="6" class="text-center">暂无Target，请点击"创建Target"按钮添加</td>
+                                        </tr>
+                                    {% endif %}
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <!-- 默认IQN值提示 -->
+                        <div class="mt-3">
+                            <small class="text-muted">默认IQN值:</small>
+                            {% if default_iqns.default %}
+                                <div><small><code>{{ default_iqns.default }}</code></small></div>
+                            {% endif %}
+                            {% if default_iqns.env %}
+                                <div><small><code>{{ default_iqns.env }}</code></small></div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LUN管理 -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <span>LUN 管理</span>
+                        <button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#createLunModal">新建 LUN</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Target</th>
+                                        <th>LUN ID</th>
+                                        <th>大小</th>
+                                        <th>后备磁盘</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% set has_luns = false %}
+                                    {% for target in targets %}
+                                        {% for lun in target.luns %}
+                                            {% set has_luns = true %}
+                                            <tr>
+                                                <td><small>Target {{ target.tid }}: <code>{{ target.name }}</code></small></td>
+                                                <td>{{ lun.lun_id }}</td>
+                                                <td>{{ lun.size }}</td>
+                                                <td>
+                                                    {% set disk_name = lun.backing_store.split('/')[-1] %}
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="fw-bold">{{ disk_name }}</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="btn-group btn-group-sm">
+                                                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="showUpdateLunIdModal('{{ target.tid }}', '{{ lun.lun_id }}')">
+                                                            修改ID
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-danger btn-sm ms-1" onclick="deleteLun('{{ target.tid }}', '{{ lun.lun_id }}')">
+                                                            解绑挂载的磁盘
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    {% endfor %}
+                                    {% if not has_luns %}
+                                        <tr>
+                                            <td colspan="5" class="text-center">到底了，请点击"新建LUN"按钮添加</td>
+                                        </tr>
+                                    {% endif %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 虚拟磁盘文件列表 -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <span>虚拟磁盘文件</span>
+                        <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createDiskModal">新建磁盘</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>文件名</th>
+                                        <th>大小</th>
+                                        <th>类型</th>
+                                        <th>创建方法</th>
+                                        <th>状态</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% if disk_files %}
+                                        {% for disk in disk_files %}
+                                            <tr>
+                                                <td>{{ disk.name }}</td>
+                                                <td>{{ disk.size }}</td>
+                                                <td><span class="badge bg-secondary">{{ disk.type }}</span></td>
+                                                <td><span class="badge bg-success">{{ disk.create_method }}</span></td>
+                                                <td>
+                                                    {% if disk.used_by %}
+                                                        <span class="badge bg-success">已绑定到 Target {{ disk.used_by.target_id }} </span>
+                                                        <span class="badge bg-info">IQN: {{ disk.used_by.target_name }}</span>
+                                                        <span class="badge bg-warning">LUN ID: {{ disk.used_by.lun_id }}</span>
+                                                    {% else %}
+                                                        <span class="badge bg-secondary">未绑定</span>
+                                                    {% endif %}
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    {% else %}
+                                        <tr>
+                                            <td colspan="4" class="text-center">暂无虚拟磁盘文件</td>
+                                        </tr>
+                                    {% endif %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .lun-block {
+                border-left: 3px solid #007bff;
+                padding-left: 10px;
+                margin-bottom: 15px;
+            }
+            .lun-header {
+                display: flex;
+                align-items: center;
+            }
+            .disk-info {
+                background: #f8f9fa;
+                padding: 8px;
+                border-radius: 4px;
+                margin-top: 8px;
+            }
+        </style>
+    </div>
+
+    <!-- 创建Target模态框 -->
+    <div class="modal fade" id="createTargetModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">创建新的Target</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="createTargetForm">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="tid" class="form-label">Target ID</label>
+                            <input type="number" class="form-control" id="tid" name="tid" min="1" required>
+                            <div class="form-text">唯一的数字ID，例如：1</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="target_name" class="form-label">Target 名称 (IQN)</label>
+                            <div class="input-group">
+                                <select class="form-select" id="default_iqn_select" style="max-width: 40%;" onchange="updateTargetName()">
+                                    <option value="">自定义IQN</option>
+                                    {% if default_iqns.default %}
+                                    <option value="{{ default_iqns.default }}">默认IQN</option>
+                                    {% endif %}
+                                    {% if default_iqns.env %}
+                                    <option value="{{ default_iqns.env }}">环境变量IQN</option>
+                                    {% endif %}
+                                </select>
+                                <input type="text" class="form-control" id="target_name" name="target_name" placeholder="iqn.yyyy-mm.com.example:name" required>
+                            </div>
+                            <div class="form-text">可以选择预定义IQN或输入自定义IQN，遵循IQN命名规范</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">访问控制设置</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="acl_mode" id="acl_mode_all" value="all" checked onchange="toggleAclMode('all')">
+                                <label class="form-check-label" for="acl_mode_all">允许所有访问</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="acl_mode" id="acl_mode_whitelist" value="whitelist" onchange="toggleAclMode('whitelist')">
+                                <label class="form-check-label" for="acl_mode_whitelist">配置白名单</label>
+                            </div>
+                            <div id="whitelist_input" class="mt-2" style="display: none;">
+                                <input type="text" class="form-control" id="initiator_address" name="initiator_address" placeholder="输入Initiator地址，多个地址用逗号分隔">
+                                <div class="form-text">例如：iqn.1994-05.com.redhat:client1,192.168.1.100</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">已连接客户端	
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-primary">创建</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 访问控制模态框 -->
+    <div class="modal fade" id="setAclModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">设置访问控制</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="aclForm">
+                    <div class="modal-body">
+                        <input type="hidden" name="tid" id="acl_tid">
+                        <input type="hidden" name="action" id="action_type" value="bind">
+                        
+                        <!-- 当前ACL列表显示区域 -->
+                        <div class="mb-3">
+                            <label class="form-label">当前访问控制列表</label>
+                            <div id="current_acl_list" class="p-2 border rounded">
+                                <div class="text-center text-muted">加载中...</div>
+                            </div>
+                        </div>
+                        
+                        <!-- 添加新的ACL -->
+                        <div class="mb-3">
+                            <label for="initiator_address" class="form-label">添加新的访问白名单</label>
+                            <input type="text" class="form-control" id="initiator_address" name="initiator_address">
+                            <div class="form-text">1、输入ALL允许所有访问</div>
+                            <div class="form-text">2、输入具体IP地址/IQN名称，用英文逗号分隔</div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-primary">保存</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 创建LUN模态框 -->
+    <div class="modal fade" id="createLunModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">创建新的LUN</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="createLunForm">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="modal_tid" class="form-label">选择Target</label>
+                            <select class="form-select" id="modal_tid" name="tid" required>
+                                <option value="">请选择Target</option>
+                                {% for target in targets %}
+                                    <option value="{{ target.tid }}">Target {{ target.tid }}: {{ target.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="lun_id" class="form-label">LUN ID</label>
+                            <input type="number" class="form-control" id="lun_id" name="lun_id" min="1" required>
+                            <div class="form-text">唯一的数字ID，例如：1</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="backing_store" class="form-label">选择后备磁盘</label>
+                            <select class="form-select" id="backing_store" name="backing_store" required>
+                                <option value="">请选择磁盘文件</option>
+                                {% for disk in disk_files %}
+                                    <option value="{{ disk.path }}">{{ disk.name }} ({{ disk.size }}, {{ disk.type }})</option>
+                                {% endfor %}
+                            </select>
+                            <div class="form-text">选择/app/iscsi目录下的磁盘文件</div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-primary">创建</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 选择磁盘模态框 -->
+    <div class="modal fade" id="selectDiskModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">选择磁盘文件</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    {% if disk_files %}
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>磁盘名称</th>
+                                        <th>容量</th>
+                                        <th>类型</th>
+                                        <th>操作</th>
+                                        <th>创建方法</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for disk in disk_files %}
+                                        <tr>
+                                            <td>{{ disk.name }}</td>
+                                            <td>{{ disk.size }}</td>
+                                            <td><span class="badge bg-secondary">{{ disk.type }}</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-primary select-disk-btn" data-disk-path="{{ disk.path }}">选择</button>
+                                            </td>
+                                            <td>{{ disk.create_method }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <div class="alert alert-info">暂无磁盘文件，请先创建磁盘</div>
+                    {% endif %}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 重新绑定LUN模态框 -->
+    <div class="modal fade" id="rebindLunModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">重新绑定LUN到其他Target</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="rebindLunForm">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="new_tid" class="form-label">目标Target ID</label>
+                            <select class="form-select" id="new_tid" name="new_tid" required>
+                                <option value="">请选择Target</option>
+                                {% for target in targets %}
+                                <option value="{{ target.tid }}">Target {{ target.tid }}: {{ target.name }}</option>
+                                {% endfor %}
+                            </select>
+                            <div class="form-text">选择要将LUN绑定到哪个Target</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="rebind_lun_id" class="form-label">LUN ID</label>
+                            <input type="number" class="form-control" id="rebind_lun_id" name="lun_id" min="1" required readonly>
+                            <div class="form-text">LUN的ID，自动填充</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="rebind_backing_store" class="form-label">后备存储路径</label>
+                            <input type="text" class="form-control" id="rebind_backing_store" name="backing_store" required readonly>
+                            <div class="form-text">磁盘文件的完整路径，自动填充</div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-primary">重新绑定</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 创建虚拟磁盘的模态框 -->
+    <div class="modal fade" id="createDiskModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">创建新的虚拟磁盘</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="createDiskForm" onsubmit="createDisk(event)">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="create_method" class="form-label">创建方式</label>
+                            <select class="form-select" id="create_method" name="create_method">
+                                <option value="dd" selected>DD方式 - 使用系统底层命令，适合创建固定大小的磁盘</option>
+                                <option value="qemu">QEMU方式 - 使用QEMU工具创建，支持更多高级格式和特性</option>
+                            </select>
+                            <div class="form-text mt-2">
+                                <p><strong>DD方式</strong>：使用Linux系统底层命令，创建实际占用空间的磁盘文件，适合小容量磁盘。</p>
+                                <p><strong>QEMU方式</strong>：使用QEMU虚拟化工具创建，支持稀疏文件，初始占用空间小，适合大容量磁盘。</p>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="disk_name" class="form-label">磁盘名称</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="disk_name" name="disk_name" required>
+                                <span class="input-group-text">.img</span>
+                            </div>
+                            <div class="form-text">磁盘文件将保存在 /app/iscsi 目录下</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="disk_size" class="form-label">磁盘大小</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="disk_size" name="disk_size" min="1" required>
+                                <select class="form-select" id="disk_unit" name="disk_unit" style="max-width: 100px;">
+                                    <option value="M">MB</option>
+                                    <option value="G" selected>GB</option>
+                                </select>
+                            </div>
+                            <div class="form-text">指定虚拟磁盘的容量大小</div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-primary">创建</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加修改Target ID的模态框 -->
+    <div class="modal fade" id="updateTargetIdModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">修改Target ID</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="updateTargetIdForm">
+                        <input type="hidden" id="old_tid" name="old_tid">
+                        <div class="mb-3">
+                            <label class="form-label">新Target ID (1-65535)</label>
+                            <input type="number" class="form-control" name="new_tid" required
+                                min="1" max="65535">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" onclick="updateTargetId()">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加修改LUN ID的模态框 -->
+    <div class="modal fade" id="updateLunIdModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">修改LUN ID</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="updateLunIdForm">
+                        <input type="hidden" id="tid_for_lun" name="tid">
+                        <input type="hidden" id="old_lun_id" name="old_lun_id">
+                        <div class="mb-3">
+                            <label class="form-label">新LUN ID (1-255)</label>
+                            <input type="number" class="form-control" name="new_lun_id" required
+                                min="1" max="255">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" onclick="updateLunId()">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,720 @@
+2025-04-11 02:41:53,665 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.110:5000
+2025-04-11 02:41:53,666 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-11 02:41:53,667 - werkzeug - INFO -  * Restarting with stat
+2025-04-11 02:41:53,843 - werkzeug - WARNING -  * Debugger is active!
+2025-04-11 02:41:53,844 - werkzeug - INFO -  * Debugger PIN: 115-699-625
+2025-04-11 02:43:49,520 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.110:5000
+2025-04-11 02:43:49,521 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-11 02:43:49,521 - werkzeug - INFO -  * Restarting with stat
+2025-04-11 02:43:49,724 - werkzeug - WARNING -  * Debugger is active!
+2025-04-11 02:43:49,724 - werkzeug - INFO -  * Debugger PIN: 115-699-625
+2025-04-11 02:43:51,145 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:43:51,146 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:43:51,153 - __main__ - ERROR - 命令执行失败:
+错误: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+输出: 
+2025-04-11 02:43:51,153 - __main__ - WARNING - 尝试 1/3 失败: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+2025-04-11 02:43:52,153 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:43:52,155 - __main__ - ERROR - 命令执行失败:
+错误: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+输出: 
+2025-04-11 02:43:52,155 - __main__ - WARNING - 尝试 2/3 失败: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+2025-04-11 02:43:53,156 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:43:53,158 - __main__ - ERROR - 命令执行失败:
+错误: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+输出: 
+2025-04-11 02:43:53,158 - __main__ - WARNING - 尝试 3/3 失败: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+2025-04-11 02:43:53,158 - __main__ - ERROR - 获取Target信息失败，已达到最大重试次数
+2025-04-11 02:43:53,158 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:43:53,158 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:43:53,160 - __main__ - ERROR - 命令执行失败:
+错误: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+输出: 
+2025-04-11 02:43:53,160 - __main__ - WARNING - 尝试 1/3 失败: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+2025-04-11 02:43:54,160 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:43:54,163 - __main__ - ERROR - 命令执行失败:
+错误: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+输出: 
+2025-04-11 02:43:54,163 - __main__ - WARNING - 尝试 2/3 失败: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+2025-04-11 02:43:55,163 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:43:55,166 - __main__ - ERROR - 命令执行失败:
+错误: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+输出: 
+2025-04-11 02:43:55,167 - __main__ - WARNING - 尝试 3/3 失败: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+2025-04-11 02:43:55,167 - __main__ - ERROR - 获取Target信息失败，已达到最大重试次数
+2025-04-11 02:43:55,167 - __main__ - INFO - 获取tgtadm命令原始输出...
+2025-04-11 02:43:55,167 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:43:55,170 - __main__ - ERROR - 命令执行失败:
+错误: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+输出: 
+2025-04-11 02:43:55,171 - __main__ - ERROR - 获取tgtadm命令输出失败: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+2025-04-11 02:43:55,197 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:43:55] "GET / HTTP/1.1" 200 -
+2025-04-11 02:43:55,345 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:43:55] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+2025-04-11 02:43:55,348 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:43:55] "GET /static/css/bootstrap-icons.css HTTP/1.1" 200 -
+2025-04-11 02:43:55,349 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:43:55] "GET /static/style.css HTTP/1.1" 200 -
+2025-04-11 02:43:55,428 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:43:55] "GET /static/js/common.js HTTP/1.1" 200 -
+2025-04-11 02:43:55,441 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:43:55] "GET /static/js/acl.js HTTP/1.1" 200 -
+2025-04-11 02:43:55,471 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:43:55] "GET /static/js/target-lun.js HTTP/1.1" 200 -
+2025-04-11 02:43:55,493 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:43:55] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+2025-04-11 02:43:55,501 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:43:55] "GET /static/js/disk.js HTTP/1.1" 200 -
+2025-04-11 02:43:55,503 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:43:55] "GET /static/iscsi-icon.svg HTTP/1.1" 200 -
+2025-04-11 02:43:55,573 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:43:55,578 - __main__ - ERROR - 命令执行失败:
+错误: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+输出: 
+2025-04-11 02:43:55,579 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:43:55,579 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:43:55,581 - __main__ - ERROR - 命令执行失败:
+错误: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+输出: 
+2025-04-11 02:43:55,581 - __main__ - WARNING - 尝试 1/3 失败: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+2025-04-11 02:43:55,840 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:43:55] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:43:56,581 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:43:56,585 - __main__ - ERROR - 命令执行失败:
+错误: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+输出: 
+2025-04-11 02:43:56,585 - __main__ - WARNING - 尝试 2/3 失败: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+2025-04-11 02:43:57,586 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:43:57,589 - __main__ - ERROR - 命令执行失败:
+错误: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+输出: 
+2025-04-11 02:43:57,590 - __main__ - WARNING - 尝试 3/3 失败: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+2025-04-11 02:43:57,590 - __main__ - ERROR - 获取Target信息失败，已达到最大重试次数
+2025-04-11 02:43:57,590 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:43:57,590 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:43:57,595 - __main__ - ERROR - 命令执行失败:
+错误: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+输出: 
+2025-04-11 02:43:57,596 - __main__ - WARNING - 尝试 1/3 失败: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+2025-04-11 02:43:58,596 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:43:58,613 - __main__ - ERROR - 命令执行失败:
+错误: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+输出: 
+2025-04-11 02:43:58,613 - __main__ - WARNING - 尝试 2/3 失败: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+2025-04-11 02:43:59,615 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:43:59,644 - __main__ - ERROR - 命令执行失败:
+错误: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+输出: 
+2025-04-11 02:43:59,645 - __main__ - WARNING - 尝试 3/3 失败: tgtadm: failed to send request hdr to tgt daemon, Transport endpoint is not connected
+
+2025-04-11 02:43:59,645 - __main__ - ERROR - 获取Target信息失败，已达到最大重试次数
+2025-04-11 02:43:59,650 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:43:59] "GET /api/status HTTP/1.1" 200 -
+2025-04-11 02:44:37,271 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.110:5000
+2025-04-11 02:44:37,272 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-11 02:44:37,273 - werkzeug - INFO -  * Restarting with stat
+2025-04-11 02:44:37,448 - werkzeug - WARNING -  * Debugger is active!
+2025-04-11 02:44:37,449 - werkzeug - INFO -  * Debugger PIN: 115-699-625
+2025-04-11 02:44:39,303 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:44:39,303 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:44:39,305 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:44:39,305 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:44:39,305 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:44:39,306 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:44:39,306 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:44:39,308 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:44:39,308 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:44:39,309 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:44:39,309 - __main__ - INFO - 获取tgtadm命令原始输出...
+2025-04-11 02:44:39,309 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:44:39,311 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:44:39,330 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:44:39] "GET / HTTP/1.1" 200 -
+2025-04-11 02:44:39,429 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:44:39] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-04-11 02:44:39,430 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:44:39] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-04-11 02:44:39,433 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:44:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-11 02:44:39,437 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:44:39] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-11 02:44:39,442 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:44:39] "[36mGET /static/js/acl.js HTTP/1.1[0m" 304 -
+2025-04-11 02:44:39,445 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:44:39] "[36mGET /static/js/target-lun.js HTTP/1.1[0m" 304 -
+2025-04-11 02:44:39,456 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:44:39] "[36mGET /static/js/disk.js HTTP/1.1[0m" 304 -
+2025-04-11 02:44:39,464 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:44:39] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-04-11 02:44:39,475 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:44:39] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:44:39,599 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:44:39,601 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:44:39,601 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:44:39,602 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:44:39,603 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:44:39,603 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:44:39,604 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:44:39,604 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:44:39,604 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:44:39,605 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:44:39,606 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:44:39,606 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:44:39,606 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:44:39] "GET /api/status HTTP/1.1" 200 -
+2025-04-11 02:44:39,670 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:44:39] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:45:05,385 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:45:05,385 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:05,392 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:05,392 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:45:05,392 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:45:05,392 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:45:05,392 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:05,394 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:05,395 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:45:05,395 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:45:05,395 - __main__ - INFO - 获取tgtadm命令原始输出...
+2025-04-11 02:45:05,395 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:05,397 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:05,413 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:05] "GET / HTTP/1.1" 200 -
+2025-04-11 02:45:05,562 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:05] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-04-11 02:45:05,564 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:05] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-04-11 02:45:05,565 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:05] "[36mGET /static/js/acl.js HTTP/1.1[0m" 304 -
+2025-04-11 02:45:05,569 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-11 02:45:05,573 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:05] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-11 02:45:05,576 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:05] "[36mGET /static/js/target-lun.js HTTP/1.1[0m" 304 -
+2025-04-11 02:45:05,597 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:05] "[36mGET /static/js/disk.js HTTP/1.1[0m" 304 -
+2025-04-11 02:45:05,601 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:05] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:45:05,606 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:05] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-04-11 02:45:05,661 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:45:05,664 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:45:05,664 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:45:05,664 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:05,666 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:05,666 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:45:05,666 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:45:05,666 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:45:05,666 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:05,668 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:05,668 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:45:05,669 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:45:05,669 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:05] "GET /api/status HTTP/1.1" 200 -
+2025-04-11 02:45:05,723 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:05] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:45:26,098 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:45:26,098 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:26,100 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:26,100 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:45:26,101 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:45:26,101 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:45:26,101 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:26,106 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:26,107 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:45:26,107 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:45:26,107 - __main__ - INFO - 获取tgtadm命令原始输出...
+2025-04-11 02:45:26,107 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:26,109 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:26,132 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:26] "GET / HTTP/1.1" 200 -
+2025-04-11 02:45:26,240 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-04-11 02:45:26,245 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:26] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-04-11 02:45:26,248 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-11 02:45:26,256 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:26] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-11 02:45:26,260 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:26] "[36mGET /static/js/acl.js HTTP/1.1[0m" 304 -
+2025-04-11 02:45:26,267 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:26] "[36mGET /static/js/target-lun.js HTTP/1.1[0m" 304 -
+2025-04-11 02:45:26,276 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:26] "[36mGET /static/js/disk.js HTTP/1.1[0m" 304 -
+2025-04-11 02:45:26,283 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:26] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-04-11 02:45:26,285 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:26] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:45:26,363 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:45:26,365 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:45:26,365 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:45:26,365 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:26,367 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:26,367 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:45:26,367 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:45:26,367 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:45:26,367 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:26,369 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:26,370 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:45:26,370 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:45:26,370 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:26] "GET /api/status HTTP/1.1" 200 -
+2025-04-11 02:45:26,451 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:26] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:45:47,873 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:45:47,873 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:47,876 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:47,876 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:45:47,876 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:45:47,877 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:45:47,877 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:47,879 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:47,879 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:45:47,879 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:45:47,879 - __main__ - INFO - 获取tgtadm命令原始输出...
+2025-04-11 02:45:47,879 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:47,881 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:47,908 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:47] "GET / HTTP/1.1" 200 -
+2025-04-11 02:45:47,995 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:47] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-04-11 02:45:47,996 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:47] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-11 02:45:47,998 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-11 02:45:48,003 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:48] "[36mGET /static/js/acl.js HTTP/1.1[0m" 304 -
+2025-04-11 02:45:48,004 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:48] "[36mGET /static/js/target-lun.js HTTP/1.1[0m" 304 -
+2025-04-11 02:45:48,007 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-04-11 02:45:48,021 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:48] "[36mGET /static/js/disk.js HTTP/1.1[0m" 304 -
+2025-04-11 02:45:48,025 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:48] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-04-11 02:45:48,039 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:48] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:45:48,091 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:45:48,097 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:45:48,097 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:45:48,097 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:48,099 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:48,099 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:45:48,099 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:45:48,099 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:45:48,099 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:48,101 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:45:48,101 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:45:48,102 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:45:48,102 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:48] "GET /api/status HTTP/1.1" 200 -
+2025-04-11 02:45:48,159 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:45:48] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:46:32,177 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:46:32,178 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:46:32,184 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:46:32,184 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:46:32,185 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:46:32,186 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:46:32,186 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:46:32,187 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:46:32,188 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:46:32,188 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:46:32,188 - __main__ - INFO - 获取tgtadm命令原始输出...
+2025-04-11 02:46:32,188 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:46:32,190 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:46:32,208 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:46:32] "GET / HTTP/1.1" 200 -
+2025-04-11 02:46:32,389 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:46:32] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-11 02:46:32,393 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:46:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-04-11 02:46:32,397 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:46:32] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-04-11 02:46:32,398 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:46:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-11 02:46:32,402 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:46:32] "[36mGET /static/js/acl.js HTTP/1.1[0m" 304 -
+2025-04-11 02:46:32,405 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:46:32] "[36mGET /static/js/target-lun.js HTTP/1.1[0m" 304 -
+2025-04-11 02:46:32,418 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:46:32] "[36mGET /static/js/disk.js HTTP/1.1[0m" 304 -
+2025-04-11 02:46:32,421 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:46:32] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-04-11 02:46:32,432 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:46:32] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:46:32,468 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:46:32,470 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:46:32,470 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:46:32,470 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:46:32,472 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:46:32,472 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:46:32,472 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:46:32,472 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:46:32,472 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:46:32,473 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:46:32,473 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:46:32,473 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:46:32,474 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:46:32] "GET /api/status HTTP/1.1" 200 -
+2025-04-11 02:46:32,529 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:46:32] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:47:05,358 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:47:05,358 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:47:05,363 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:47:05,363 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:47:05,363 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:47:05,363 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:47:05,363 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:47:05,365 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:47:05,366 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:47:05,366 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:47:05,367 - __main__ - INFO - 获取tgtadm命令原始输出...
+2025-04-11 02:47:05,367 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:47:05,369 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:47:05,385 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:05] "GET / HTTP/1.1" 200 -
+2025-04-11 02:47:05,575 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:05] "[36mGET /static/js/target-lun.js HTTP/1.1[0m" 304 -
+2025-04-11 02:47:05,576 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-11 02:47:05,579 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:05] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-04-11 02:47:05,582 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:05] "[36mGET /static/js/acl.js HTTP/1.1[0m" 304 -
+2025-04-11 02:47:05,600 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:05] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-04-11 02:47:05,605 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:05] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-11 02:47:05,622 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:05] "[36mGET /static/js/disk.js HTTP/1.1[0m" 304 -
+2025-04-11 02:47:05,622 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:05] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-04-11 02:47:05,633 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:05] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:47:05,705 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:47:05,707 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:47:05,707 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:47:05,707 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:47:05,709 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:47:05,709 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:47:05,709 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:47:05,712 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:47:05,712 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:47:05,714 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:47:05,714 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:47:05,715 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:47:05,715 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:05] "GET /api/status HTTP/1.1" 200 -
+2025-04-11 02:47:05,784 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:05] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:47:16,931 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:47:16,931 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:47:16,933 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:47:16,933 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:47:16,934 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:47:16,934 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:47:16,934 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:47:16,936 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:47:16,936 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:47:16,936 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:47:16,936 - __main__ - INFO - 获取tgtadm命令原始输出...
+2025-04-11 02:47:16,936 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:47:16,938 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:47:16,959 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:16] "GET / HTTP/1.1" 200 -
+2025-04-11 02:47:17,074 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:17] "[36mGET /static/js/acl.js HTTP/1.1[0m" 304 -
+2025-04-11 02:47:17,075 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:17] "[36mGET /static/js/target-lun.js HTTP/1.1[0m" 304 -
+2025-04-11 02:47:17,075 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:17] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-04-11 02:47:17,076 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-04-11 02:47:17,077 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-11 02:47:17,078 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:17] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-11 02:47:17,096 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:17] "[36mGET /static/js/disk.js HTTP/1.1[0m" 304 -
+2025-04-11 02:47:17,100 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:17] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-04-11 02:47:17,109 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:17] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:47:17,154 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:47:17,156 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:47:17,156 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:47:17,157 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:47:17,159 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:47:17,159 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:47:17,159 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:47:17,160 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:47:17,160 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:47:17,162 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:47:17,162 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:47:17,162 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:47:17,163 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:17] "GET /api/status HTTP/1.1" 200 -
+2025-04-11 02:47:17,209 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:47:17] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:48:24,209 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:48:24,210 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:24,212 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:24,212 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:48:24,212 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:48:24,212 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:48:24,213 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:24,214 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:24,214 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:48:24,214 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:48:24,215 - __main__ - INFO - 获取tgtadm命令原始输出...
+2025-04-11 02:48:24,215 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:24,217 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:24,234 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:24] "GET / HTTP/1.1" 200 -
+2025-04-11 02:48:24,343 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:24] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-04-11 02:48:24,343 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:24] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-11 02:48:24,344 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-04-11 02:48:24,350 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:24] "[36mGET /static/js/acl.js HTTP/1.1[0m" 304 -
+2025-04-11 02:48:24,354 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:24] "[36mGET /static/js/target-lun.js HTTP/1.1[0m" 304 -
+2025-04-11 02:48:24,357 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-11 02:48:24,367 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:24] "[36mGET /static/js/disk.js HTTP/1.1[0m" 304 -
+2025-04-11 02:48:24,376 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:24] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-04-11 02:48:24,385 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:24] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:48:24,445 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:48:24,448 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:48:24,448 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:48:24,448 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:24,450 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:24,450 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:48:24,450 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:48:24,450 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:48:24,450 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:24,452 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:24,452 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:48:24,452 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:48:24,453 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:24] "GET /api/status HTTP/1.1" 200 -
+2025-04-11 02:48:24,499 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:24] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:48:46,391 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:48:46,391 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:46,394 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:46,394 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:48:46,394 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:48:46,394 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:48:46,394 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:46,396 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:46,396 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:48:46,396 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:48:46,397 - __main__ - INFO - 获取tgtadm命令原始输出...
+2025-04-11 02:48:46,397 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:46,399 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:46,419 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:46] "GET / HTTP/1.1" 200 -
+2025-04-11 02:48:46,509 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:46] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-04-11 02:48:46,513 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:46] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-04-11 02:48:46,518 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:46] "[36mGET /static/js/target-lun.js HTTP/1.1[0m" 304 -
+2025-04-11 02:48:46,520 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:46] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-11 02:48:46,524 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:46] "[36mGET /static/js/acl.js HTTP/1.1[0m" 304 -
+2025-04-11 02:48:46,527 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-11 02:48:46,548 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:46] "[36mGET /static/js/disk.js HTTP/1.1[0m" 304 -
+2025-04-11 02:48:46,553 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:46] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-04-11 02:48:46,560 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:46] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:48:46,596 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:48:46,598 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:48:46,598 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:48:46,598 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:46,601 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:46,601 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:48:46,601 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:48:46,601 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:48:46,601 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:46,603 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:46,603 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:48:46,604 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:48:46,604 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:46] "GET /api/status HTTP/1.1" 200 -
+2025-04-11 02:48:46,658 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:46] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:48:48,867 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:48:48,867 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:48,878 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:48,878 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:48:48,878 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:48:48,878 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:48:48,879 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:48,896 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:48,896 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:48:48,896 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:48:48,896 - __main__ - INFO - 获取tgtadm命令原始输出...
+2025-04-11 02:48:48,896 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:48,898 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:48,899 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:48] "GET / HTTP/1.1" 200 -
+2025-04-11 02:48:48,970 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:48] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-04-11 02:48:48,973 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-04-11 02:48:48,992 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:48] "[36mGET /static/js/acl.js HTTP/1.1[0m" 304 -
+2025-04-11 02:48:48,992 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:48] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-11 02:48:48,995 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-11 02:48:49,003 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:49] "[36mGET /static/js/target-lun.js HTTP/1.1[0m" 304 -
+2025-04-11 02:48:49,011 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:49] "[36mGET /static/js/disk.js HTTP/1.1[0m" 304 -
+2025-04-11 02:48:49,028 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:49] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:48:49,029 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:49] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-04-11 02:48:49,123 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:48:49,125 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:48:49,125 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:48:49,125 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:49,127 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:49,127 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:48:49,127 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:48:49,128 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:48:49,128 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:49,130 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:49,130 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:48:49,130 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:48:49,131 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:49] "GET /api/status HTTP/1.1" 200 -
+2025-04-11 02:48:49,163 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:49] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:48:52,738 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:48:52,739 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:52,754 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:52,755 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:48:52,755 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:48:52,755 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:48:52,755 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:52,757 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:52,758 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:48:52,758 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:48:52,758 - __main__ - INFO - 获取tgtadm命令原始输出...
+2025-04-11 02:48:52,758 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:52,761 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:52,778 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:52] "GET / HTTP/1.1" 200 -
+2025-04-11 02:48:52,846 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:52] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-04-11 02:48:52,856 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:52] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-04-11 02:48:52,861 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-11 02:48:52,866 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:52] "[36mGET /static/js/target-lun.js HTTP/1.1[0m" 304 -
+2025-04-11 02:48:52,868 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:52] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-11 02:48:52,872 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:52] "[36mGET /static/js/acl.js HTTP/1.1[0m" 304 -
+2025-04-11 02:48:52,878 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:52] "[36mGET /static/js/disk.js HTTP/1.1[0m" 304 -
+2025-04-11 02:48:52,883 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:52] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-04-11 02:48:52,890 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:52] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:48:52,952 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:48:52,956 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:48:52,956 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:48:52,956 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:52,958 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:52,958 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:48:52,958 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:48:52,958 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:48:52,958 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:52,960 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:48:52,960 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:48:52,960 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:48:52,961 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:52] "GET /api/status HTTP/1.1" 200 -
+2025-04-11 02:48:52,999 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:48:52] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:49:32,663 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:49:32,663 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:49:32,665 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:49:32,666 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:49:32,666 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:49:32,666 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:49:32,666 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:49:32,667 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:49:32,668 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:49:32,668 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:49:32,668 - __main__ - INFO - 获取tgtadm命令原始输出...
+2025-04-11 02:49:32,669 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:49:32,671 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:49:32,685 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:32] "GET / HTTP/1.1" 200 -
+2025-04-11 02:49:32,776 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-04-11 02:49:32,781 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:32] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-04-11 02:49:32,784 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-11 02:49:32,789 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:32] "[36mGET /static/js/target-lun.js HTTP/1.1[0m" 304 -
+2025-04-11 02:49:32,793 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:32] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-11 02:49:32,796 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:32] "[36mGET /static/js/acl.js HTTP/1.1[0m" 304 -
+2025-04-11 02:49:32,818 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:32] "[36mGET /static/js/disk.js HTTP/1.1[0m" 304 -
+2025-04-11 02:49:32,824 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:32] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-04-11 02:49:32,825 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:32] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:49:32,876 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:49:32,883 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:49:32,883 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:49:32,883 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:49:32,886 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:49:32,886 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:49:32,886 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:49:32,887 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:49:32,887 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:49:32,889 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:49:32,890 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:49:32,890 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:49:32,890 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:32] "GET /api/status HTTP/1.1" 200 -
+2025-04-11 02:49:32,958 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:32] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:49:59,024 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:49:59,024 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:49:59,027 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:49:59,027 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:49:59,027 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '1', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}, {'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:49:59,027 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode logicalunit --op new --tid 1 --lun 33 -b /app/iscsi/SYY.img
+2025-04-11 02:49:59,031 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode logicalunit --op new --tid 1 --lun 33 -b /app/iscsi/SYY.img
+2025-04-11 02:49:59,032 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode logicalunit --op delete --tid 1 --lun 1
+2025-04-11 02:49:59,056 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode logicalunit --op delete --tid 1 --lun 1
+2025-04-11 02:49:59,057 - __main__ - INFO - 保存tgt配置到持久化目录...
+2025-04-11 02:49:59,151 - __main__ - INFO - 配置保存成功
+2025-04-11 02:49:59,152 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:59] "POST /lun/update_id HTTP/1.1" 200 -
+2025-04-11 02:49:59,192 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:49:59,192 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:49:59,197 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:49:59,197 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:49:59,197 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}, {'lun_id': '33', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:49:59,198 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:49:59,198 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:49:59,203 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:49:59,203 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:49:59,204 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}, {'lun_id': '33', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:49:59,206 - __main__ - INFO - 获取tgtadm命令原始输出...
+2025-04-11 02:49:59,206 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:49:59,211 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:49:59,243 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:59] "GET / HTTP/1.1" 200 -
+2025-04-11 02:49:59,407 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:59] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-04-11 02:49:59,413 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:59] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-11 02:49:59,416 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:59] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-04-11 02:49:59,418 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:59] "[36mGET /static/js/target-lun.js HTTP/1.1[0m" 304 -
+2025-04-11 02:49:59,421 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:59] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-11 02:49:59,425 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:59] "[36mGET /static/js/acl.js HTTP/1.1[0m" 304 -
+2025-04-11 02:49:59,438 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:59] "[36mGET /static/js/disk.js HTTP/1.1[0m" 304 -
+2025-04-11 02:49:59,442 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:59] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-04-11 02:49:59,456 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:59] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:49:59,513 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:49:59,516 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:49:59,516 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:49:59,516 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:49:59,518 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:49:59,519 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:49:59,519 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}, {'lun_id': '33', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:49:59,519 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:49:59,519 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:49:59,521 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:49:59,522 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:49:59,522 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}, {'lun_id': '33', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:49:59,522 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:59] "GET /api/status HTTP/1.1" 200 -
+2025-04-11 02:49:59,561 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:49:59] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:50:13,298 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:50:13,302 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:13,305 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:13,305 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:50:13,306 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}, {'lun_id': '33', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:50:13,306 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:13] "POST /refresh_targets HTTP/1.1" 200 -
+2025-04-11 02:50:13,349 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:50:13,349 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:13,351 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:13,351 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:50:13,352 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}, {'lun_id': '33', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:50:13,352 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:50:13,352 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:13,353 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:13,353 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:50:13,354 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}, {'lun_id': '33', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:50:13,354 - __main__ - INFO - 获取tgtadm命令原始输出...
+2025-04-11 02:50:13,354 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:13,356 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:13,357 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:13] "GET / HTTP/1.1" 200 -
+2025-04-11 02:50:13,428 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:13] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-04-11 02:50:13,432 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:13] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-04-11 02:50:13,445 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-11 02:50:13,446 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:13] "[36mGET /static/js/acl.js HTTP/1.1[0m" 304 -
+2025-04-11 02:50:13,447 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:13] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-11 02:50:13,450 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:13] "[36mGET /static/js/target-lun.js HTTP/1.1[0m" 304 -
+2025-04-11 02:50:13,469 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:13] "[36mGET /static/js/disk.js HTTP/1.1[0m" 304 -
+2025-04-11 02:50:13,469 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-04-11 02:50:13,473 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:13] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:50:13,543 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:50:13,545 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:50:13,545 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:50:13,545 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:13,547 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:13,547 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:50:13,548 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}, {'lun_id': '33', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:50:13,548 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:50:13,548 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:13,550 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:13,550 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:50:13,550 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}, {'lun_id': '33', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:50:13,551 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:13] "GET /api/status HTTP/1.1" 200 -
+2025-04-11 02:50:13,644 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:13] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:50:18,932 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:50:18,932 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:18,935 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:18,935 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:50:18,935 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}, {'lun_id': '33', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:50:18,936 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:18] "POST /refresh_targets HTTP/1.1" 200 -
+2025-04-11 02:50:18,972 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:50:18,973 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:18,976 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:18,976 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:50:18,976 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}, {'lun_id': '33', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:50:18,977 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:50:18,977 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:18,979 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:18,979 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:50:18,979 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}, {'lun_id': '33', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:50:18,980 - __main__ - INFO - 获取tgtadm命令原始输出...
+2025-04-11 02:50:18,980 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:18,982 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:18,982 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:18] "GET / HTTP/1.1" 200 -
+2025-04-11 02:50:19,057 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:19] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-04-11 02:50:19,061 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:19] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+2025-04-11 02:50:19,066 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-11 02:50:19,070 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:19] "[36mGET /static/js/target-lun.js HTTP/1.1[0m" 304 -
+2025-04-11 02:50:19,074 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:19] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-11 02:50:19,079 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:19] "[36mGET /static/js/acl.js HTTP/1.1[0m" 304 -
+2025-04-11 02:50:19,094 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:19] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-04-11 02:50:19,096 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:19] "[36mGET /static/js/disk.js HTTP/1.1[0m" 304 -
+2025-04-11 02:50:19,100 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:19] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -
+2025-04-11 02:50:19,172 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:50:19,175 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode system --op show
+2025-04-11 02:50:19,175 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:50:19,175 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:19,176 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:19,176 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:50:19,177 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}, {'lun_id': '33', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:50:19,177 - __main__ - INFO - 获取Target信息...
+2025-04-11 02:50:19,177 - __main__ - INFO - 执行命令: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:19,179 - __main__ - INFO - 执行命令成功,output: tgtadm --lld iscsi --mode target --op show
+2025-04-11 02:50:19,179 - __main__ - INFO - 解析Target信息...
+2025-04-11 02:50:19,179 - __main__ - INFO - Target信息解析完成，[{'tid': '1', 'name': 'iqn.2025-05.com.cherry:target1', 'luns': [{'lun_id': '2', 'type': 'disk', 'size': '1.05 GB', 'backing_store': '/app/iscsi/test2.img', 'status': 'online'}, {'lun_id': '33', 'type': 'disk', 'size': '2.10 GB', 'backing_store': '/app/iscsi/SYY.img', 'status': 'online'}], 'initiators': [], 'acl_list': ['ALL'], 'acl_mode': 'all', 'nexus_information': [{'nexus_id': '1', 'initiator': 'iqn.1991-05.com.microsoft:desktop-p6i53gn alias: none', 'ip_address': '192.168.0.132'}]}]
+2025-04-11 02:50:19,179 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:19] "GET /api/status HTTP/1.1" 200 -
+2025-04-11 02:50:19,222 - werkzeug - INFO - 61.164.59.162 - - [11/Apr/2025 02:50:19] "[36mGET /static/iscsi-icon.svg HTTP/1.1[0m" 304 -

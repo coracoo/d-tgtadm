@@ -1,0 +1,78 @@
+/* iSCSI Web管理界面样式 */
+
+.logo {
+    max-height: 40px;
+    margin-right: 10px;
+}
+
+.dashboard-card {
+    transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.target-badge {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+    margin-left: 0.5rem;
+}
+
+/* 自定义状态颜色 */
+.status-warning {
+    background-color: #ffc107;
+}
+
+/* Target和LUN样式优化 */
+.target-item {
+    border-left: 4px solid #007bff;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.lun-item {
+    border-left: 4px solid #28a745;
+    padding-left: 15px;
+    margin: 10px 0 10px 20px;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .card-header button {
+        margin-top: 10px;
+    }
+}
+
+
+/* 添加自适应状态栏样式 */
+.status-card {
+    height: auto !important;
+    min-height: 100px;
+}
+
+.status-card .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.status-log {
+    overflow-y: auto;
+    max-height: 300px;
+    flex-grow: 1;
+    word-break: break-word;
+    white-space: pre-wrap;
+}
