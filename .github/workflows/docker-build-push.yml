@@ -30,8 +30,8 @@ jobs:
           context: .  # Dockerfile 所在目录
           push: true  # 只有 push 时才上传镜像
           tags: |
-            ghcr.io/${{ github.repository_owner }}/iscsi-manager:latest
-            ghcr.io/${{ github.repository_owner }}/iscsi-manager:${{ github.sha }}
+            ghcr.io/${{ github.repository_owner }}/d-tgtadm:latest
+            ghcr.io/${{ github.repository_owner }}/d-tgtadm:${{ github.sha }}
           labels: |
             maintainer="可爱的小cherry"
             org.opencontainers.image.source=${{ github.repositoryUrl }}
