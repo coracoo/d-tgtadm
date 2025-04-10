@@ -28,7 +28,7 @@ docker run -itd \
   -v /现有虚拟磁盘路径/1.img:/app/iscsi/1.img \
   # 日志、配置文件永久存储文件夹
   -v /tgt/config:/app/config \
-  cherry4nas/d-tgtadm:latest
+  ghcr.io/coracoo/d-tgtadm:latest
 ```
 
 ---
